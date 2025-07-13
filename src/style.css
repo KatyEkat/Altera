@@ -1,0 +1,73 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	padding: 40px 60px;
+}
+
+.choose_hookah_header {
+	font-size: clamp(1.625rem, 0.9432rem + 3.4091vw, 3.5rem);
+	font-family: "Prosto One";
+	font-style: normal;
+	text-align: center;
+	font-weight: 500;
+	line-height: normal;
+	color: #5f5f5f;
+}
+
+.accordion {
+	border-bottom: 2px solid rgb(255, 114, 83);
+	border-radius: 5px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.accordion-toggle {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 24px;
+	background: none;
+	border: none;
+	font-family: "Jost";
+	font-size: clamp(1.125rem, 0.9432rem + 0.9091vw, 1.625rem);
+	font-weight: 600;
+	color: #393939;
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+
+.accordion-toggle:hover {
+	background: #e5e5e5;
+}
+
+.accordion-toggle img {
+	transition: transform 0.3s ease;
+}
+
+.accordion.open .accordion-toggle img {
+	transform: rotate(180deg);
+}
+
+.accordion-content {
+	max-height: 0;
+	overflow: hidden;
+	background-color: #f3f3f3;
+	transition: max-height 0.3s ease;
+}
+
+.accordion.open .accordion-content {
+	max-height: 100%;
+}
+
+.accordion-content p {
+	font-family: "Jost";
+	font-size: clamp(1rem, 0.8182rem + 0.9091vw, 1.5rem);
+	color: #636363;
+	padding: 20px 24px;
+	line-height: normal;
+}
